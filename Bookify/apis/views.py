@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from .models import Profile,Books
 from .serializers import ProfileSerializer,BooksSerializer
 
@@ -12,3 +12,4 @@ class ProfileView(viewsets.ModelViewSet):
 class BooksView(viewsets.ModelViewSet):
     queryset = Books.objects.all()
     serializer_class = BooksSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
