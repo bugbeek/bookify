@@ -15,7 +15,7 @@ class Profile(models.Model):
         return self.email
 
 
-
+#this is upload book model
 class Books(models.Model):
     name = models.CharField(max_length= 100)
     price = models.IntegerField()
