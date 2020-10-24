@@ -9,4 +9,4 @@ class ProfileSerializer(serializers.ModelSerializer):
 class BooksSerializer(serializers.ModelSerializer):
     class Meta:
         model = Books
-        fields = ['id','url','name','descriptions','price']
+        fields = ['id','url','name','descriptions','price','date_posted']

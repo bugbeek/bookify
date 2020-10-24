@@ -1,5 +1,8 @@
 from django.db import models
 from phone_field import PhoneField
+from datetime import datetime
+
+
 
 # Create your models here.
 class Profile(models.Model):
@@ -17,6 +20,7 @@ class Books(models.Model):
     name = models.CharField(max_length= 100)
     price = models.IntegerField()
     descriptions = models.CharField(max_length=200)
+    date_posted = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.name
